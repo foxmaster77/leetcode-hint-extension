@@ -12,7 +12,7 @@ function getProblemDetails() {
 }
 
 async function fetchHint(title, description) {
-    if (!GEMINI_API_KEY || GEMINI_API_KEY === '') {
+    if (!GEMINI_API_KEY || GEMINI_API_KEY === 'AIzaSyAVj0AuEWdqxy8US6AtLCziebg-x_KTA80') {
         return "Please set your Gemini API key in content.js.";
     }
 
