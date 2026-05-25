@@ -1,4 +1,4 @@
-const GEMINI_API_KEY = 'YOUR_API_KEY_HERE';
+const GEMINI_API_KEY = 'AIzaSyA7-sZA_T-ZZQmscBtu6Z47BPYZRyrPN2Y';
 
 function getProblemDetails() {
     // Leetcode DOM changes frequently, so this is a best-effort extraction
@@ -12,7 +12,7 @@ function getProblemDetails() {
 }
 
 async function fetchHint(title, description) {
-    if (!GEMINI_API_KEY || GEMINI_API_KEY === 'AIzaSyAVj0AuEWdqxy8US6AtLCziebg-x_KTA80') {
+    if (!GEMINI_API_KEY || GEMINI_API_KEY === 'YOUR_API_KEY_HERE') {
         return "Please set your Gemini API key in content.js.";
     }
 
@@ -24,7 +24,7 @@ ${description}
 Provide a helpful hint to guide me in the right direction WITHOUT revealing the solution or writing any code. Keep it brief and conceptual.`;
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
