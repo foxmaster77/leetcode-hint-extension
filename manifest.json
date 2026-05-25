@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Hint Assistant",
+  "version": "1.0",
+  "description": "Provides helpful hints for LeetCode problems without revealing the solution.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "css": ["style.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
